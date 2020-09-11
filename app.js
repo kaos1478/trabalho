@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const swaggerJsDoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
+const cors = require('cors');
 
 const takeBiggest = (counter) => Math.max.apply(null, counter)
 const ondenation = (a, b) => a - b
@@ -52,6 +53,7 @@ const swaggerOptions = {
 const swaggerDocs = swaggerJsDoc(swaggerOptions);
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
+app.use(cors())
 app.use(express.json());
 
 // Routes
