@@ -306,9 +306,9 @@ app.get("/harmonicmean", (req, res) => {
 
 /**
  * @swagger
- * /moda:
+ * /mod:
  *  get:
- *    description: Use to request a Harmonic mean
+ *    description: Use to request a mod
  *    parameters:
  *      - name: value1
  *        in: query
@@ -335,7 +335,7 @@ app.get("/harmonicmean", (req, res) => {
  *      '200':
  *        description: A successful response
  */
-app.get("/moda", (req, res) => {
+app.get("/mod", (req, res) => {
     const {value1, value2, value3} = req.query
     const result = moda([Number(value1), Number(value2), Number(value3)])
     res.status(200).json({"value1": Number(value1), "value2": Number(value2), "value3": Number(value3) , "result": result, "expression": ""});
