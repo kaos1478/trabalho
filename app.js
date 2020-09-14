@@ -38,12 +38,12 @@ const swaggerOptions = {
     swaggerDefinition: {
         info: {
             version: "1.0.0",
-            title: "Customer API",
-            description: "Customer API Information",
+            title: "Calculator API",
+            description: "Bruno Henrique Ramos da Silva (N154CD4)",
             contact: {
-                name: "Amazing Developer"
+                name: "Bruno Henrique Ramos da Silva"
             },
-            servers: ["http://localhost:5000"]
+            servers: ["https://trabalho-robson-backend.herokuapp.com/"]
         }
     },
         // ['.routes/*.js']
